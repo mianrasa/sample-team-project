@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SagaLearn - Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="logo-text">
+                        <h2>SagaLearn</h2>
+                        <span>LMS Portal</span>
+                    </div>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <ul>
+                        <li class="nav-item active">
+                            <a href="#dashboard" data-page="dashboard">
+                                <i class="fas fa-th-large"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#leaderboard" data-page="leaderboard">
+                                <i class="fas fa-trophy"></i>
+                                <span>Leaderboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#login" data-page="login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>Login</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#databases" data-page="databases">
+                                <i class="fas fa-database"></i>
+                                <span>Databases</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#focus" data-page="focus">
+                                <i class="fas fa-bullseye"></i>
+                                <span>Focus</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#email" data-page="email">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#experienced" data-page="experienced">
+                                <i class="fas fa-star"></i>
+                                <span>Experienced</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#insights" data-page="insights">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Insights</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#activity" data-page="activity">
+                                <i class="fas fa-activity"></i>
+                                <span>Activity</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#course" data-page="course">
+                                <i class="fas fa-book"></i>
+                                <span>Course</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#achievements" data-page="achievements">
+                                <i class="fas fa-award"></i>
+                                <span>Achievements</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#gaming" data-page="gaming">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Gaming</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#email2" data-page="email2">
+                                <i class="fas fa-mail-bulk"></i>
+                                <span>Email</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#appfixing" data-page="appfixing">
+                                <i class="fas fa-tools"></i>
+                                <span>Appfixing</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#logouts" data-page="logouts">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logouts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/40/8B5CF6/FFFFFF?text=AJ" alt="User Avatar" id="userAvatar">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName">Alex Johnson</div>
+                        <div class="user-level">Level <span id="userLevel">12</span></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-area" id="contentArea">
+                <!-- Dashboard Content -->
+                <div class="page-content" id="dashboardPage">
+                    <!-- Top Profile Cards -->
+                    <div class="profile-cards-section">
+                        <div class="profile-card purple-card">
+                            <div class="profile-avatar">
+                                <img src="https://via.placeholder.com/60/4F46E5/FFFFFF?text=T" alt="Tasks">
+                            </div>
+                            <div class="profile-info">
+                                <h3>Tasks</h3>
+                                <p>Assignments, quizzes, mock exams</p>
+                                <span class="profile-status">Next: Coursework</span>
+                            </div>
+                            <button class="profile-menu-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+
+                        <div class="profile-card blue-card">
+                            <div class="profile-avatar">
+                                <img src="https://via.placeholder.com/60/3B82F6/FFFFFF?text=P" alt="Progress">
+                            </div>
+                            <div class="profile-info">
+                                <h3>Progress</h3>
+                                <p>Track your learning journey</p>
+                                <span class="profile-status">Actions</span>
+                            </div>
+                            <button class="profile-menu-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+
+                        <div class="profile-card pink-card">
+                            <div class="profile-avatar">
+                                <img src="https://via.placeholder.com/60/EC4899/FFFFFF?text=P" alt="Points">
+                            </div>
+                            <div class="profile-info">
+                                <h3>Points</h3>
+                                <p>The current semester total earning</p>
+                                <span class="profile-status">Leaderboard</span>
+                            </div>
+                            <button class="profile-menu-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+
+                        <div class="profile-card green-card">
+                            <div class="profile-avatar">
+                                <img src="https://via.placeholder.com/60/10B981/FFFFFF?text=A" alt="Achievements">
+                            </div>
+                            <div class="profile-info">
+                                <h3>Achievements</h3>
+                                <p>Highest students, successful learning</p>
+                                <span class="profile-status">Testyoution</span>
+                            </div>
+                            <button class="profile-menu-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Main Dashboard Grid -->
+                    <div class="dashboard-main-grid">
+                        <!-- Left Column -->
+                        <div class="dashboard-left-column">
+                            <!-- Daily Communications Chart -->
+                            <div class="dashboard-card chart-card">
+                                <div class="card-header">
+                                    <h2><i class="fas fa-plus"></i> Daily tracked communications</h2>
+                                </div>
+                                <div class="card-content">
+                                    <div class="chart-container">
+                                        <canvas id="communicationsChart" width="600" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Course Cards Row -->
+                            <div class="dashboard-grid-row">
+                                <!-- Courses -->
+                                <div class="dashboard-card courses-card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-book"></i> Courses</h2>
+                                        <p>Assignments monthly</p>
+                                        <button class="card-menu-btn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-content">
+                                        <div id="coursesList" class="courses-list">
+                                            <!-- Courses will be loaded here -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Clubs -->
+                                <div class="dashboard-card clubs-card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-users"></i> Clubs</h2>
+                                        <p>Achievements</p>
+                                        <button class="card-menu-btn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-content">
+                                        <div id="clubsList" class="clubs-list">
+                                            <!-- Clubs will be loaded here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Activities and Skills Row -->
+                            <div class="dashboard-grid-row">
+                                <!-- Extracurricular Activities -->
+                                <div class="dashboard-card activities-card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-star"></i> Activities</h2>
+                                        <p>Extracurricular</p>
+                                        <button class="card-menu-btn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-content">
+                                        <div id="activitiesList" class="activities-list">
+                                            <!-- Activities will be loaded here -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill Development -->
+                                <div class="dashboard-card skills-card">
+                                    <div class="card-header">
+                                        <h2><i class="fas fa-brain"></i> Skills</h2>
+                                        <p>Development</p>
+                                        <button class="card-menu-btn">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-content">
+                                        <div id="skillsList" class="skills-grid">
+                                            <!-- Skills will be loaded here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="dashboard-right-column">
+                            <!-- Leaderboard Table -->
+                            <div class="dashboard-card leaderboard-card">
+                                <div class="card-header">
+                                    <h2><i class="fas fa-trophy"></i> Mock achievements</h2>
+                                    <div class="leaderboard-tabs">
+                                        <button class="tab-btn active" data-tab="weekly">Weekly</button>
+                                        <button class="tab-btn" data-tab="monthly">Monthly</button>
+                                    </div>
+                                    <button class="card-menu-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <div class="leaderboard-info">
+                                        <p>Missed top <span class="highlight">Easy target</span> Large increase school team</p>
+                                    </div>
+                                    <div id="leaderboardTable" class="leaderboard-table">
+                                        <!-- Leaderboard table will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pending Tasks -->
+                            <div class="dashboard-card pending-tasks-card">
+                                <div class="card-header">
+                                    <h2><i class="fas fa-clock"></i> Pending Tasks</h2>
+                                    <p>Assignments and quizzes due</p>
+                                    <button class="card-menu-btn">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <div id="pendingTasksList" class="pending-tasks-list">
+                                        <!-- Pending tasks will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Detail Pages -->
+                <div class="page-content course-detail-page" id="courseDetailPage" style="display: none;">
+                    <div class="course-detail-header">
+                        <button class="back-btn" id="backToDashboard">
+                            <i class="fas fa-arrow-left"></i> Back to Dashboard
+                        </button>
+                        <h1 id="courseDetailTitle">Course Title</h1>
+                    </div>
+                    <div class="course-detail-content" id="courseDetailContent">
+                        <!-- Course detail content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Other page contents -->
+                <div class="page-content" id="coursesPage" style="display: none;">
+                    <h1>My Courses</h1>
+                    <p>Course management page content...</p>
+                </div>
+
+                <div class="page-content" id="assignmentsPage" style="display: none;">
+                    <h1>Assignments</h1>
+                    <p>Assignment management page content...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Achievement Popup -->
+    <div class="achievement-popup" id="achievementPopup">
+        <div class="achievement-popup-content">
+            <div class="achievement-icon" id="achievementIcon">🏆</div>
+            <div class="achievement-text">
+                <h3>Achievement Unlocked!</h3>
+                <h4 id="achievementName">Achievement Name</h4>
+                <p id="achievementDescription">Achievement description</p>
+                <div class="xp-reward">+<span id="achievementXP">100</span> XP</div>
+            </div>
+            <button class="achievement-close" id="achievementClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notificationToast">
+        <div class="toast-content">
+            <i class="toast-icon fas fa-info-circle"></i>
+            <span class="toast-message" id="toastMessage">Notification message</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
